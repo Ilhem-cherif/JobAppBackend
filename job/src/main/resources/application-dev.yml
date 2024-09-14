@@ -1,0 +1,46 @@
+#dev configuration
+#configure the connexion to our database
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/workshop
+    username: postgres
+    password: ilhem123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: localhost
+    port: 1025
+    username: ilhem
+    password: ilhem
+    properties:
+      mail:
+        smtp:
+          trust: '*'
+        auth: true
+        starttls:
+          enable: true
+        connectiontimeout: 5000
+        timeout: 3000
+        writetimeout: 5000
+
+application:
+  security:
+    jwt:
+      secret-Key: 4da51636b241cbcea1ac30bb460316472f0cb9e87cc781ded349aa68586e211f
+      expiration: 2592000000
+  mailing:
+    frontend:
+      activation-url: http://localhost:4200/activate-account
+  file:
+    upload:
+      photos-output-path: ./uploads
+server:
+  port: 8081
