@@ -5,8 +5,8 @@ import jakarta.validation.constraints.NotNull;
 
 public record SkillRequest(
         Integer id,
-        @NotNull(message = "300")
-        @NotEmpty(message = "300")
+        @NotNull(message = "Title is mandatory")
+        @NotEmpty(message = "Title is mandatory")
         String title,
         String description,
         String level

@@ -78,6 +78,7 @@ public class AuthenticationService {
     public ProfileResponse getProfileByCandidate(Authentication connectedUser) {
         Candidate candidate = ((Candidate) connectedUser.getPrincipal());
         return ProfileResponse.builder()
+                .id(candidate.getId())
                 .firstName(candidate.getFirstname())
                 .lastName(candidate.getLastname())
                 .personalResume(candidate.getPersonalResume())
@@ -90,6 +91,7 @@ public class AuthenticationService {
     public EntrepriseProfileResponse getProfileByEmployer(Authentication connectedUser) {
         Employer employer  = ((Employer) connectedUser.getPrincipal());
         return EntrepriseProfileResponse.builder()
+                .id(employer.getId())
                 .entrepriseName(employer.getEntrepriseName())
                 .entrepriseDescription(employer.getEntrepriseDescription())
                 .entrepriseLogo(employer.getEntrepriseLogo())

@@ -5,11 +5,11 @@ import jakarta.validation.constraints.NotNull;
 
 public record JobOfferRequest(
         Integer id,
-        @NotNull(message = "100")
-        @NotEmpty(message = "100")
+        @NotNull(message = "Title is mandatory")
+        @NotEmpty(message = "Title is mandatory")
         String title,
-        @NotNull(message = "101")
-        @NotEmpty(message = "101")
+        @NotNull(message = "Description is mandatory")
+        @NotEmpty(message = "Description is mandatory")
         String description,
         boolean isConfirmed
 ) {

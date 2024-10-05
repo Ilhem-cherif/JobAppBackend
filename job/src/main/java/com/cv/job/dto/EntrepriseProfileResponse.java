@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class EntrepriseProfileResponse {
+    private Long id;
     private String entrepriseName;
     private String entrepriseDescription;
     private String entrepriseLogo;

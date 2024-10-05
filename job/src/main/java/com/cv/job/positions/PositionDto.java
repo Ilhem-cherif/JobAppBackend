@@ -5,23 +5,23 @@ import jakarta.validation.constraints.NotNull;
 
 public record PositionDto(
         Integer id,
-        @NotNull(message = "200")
-        @NotEmpty(message = "200")
+        @NotNull(message = "Title is mandatory")
+        @NotEmpty(message = "Title is mandatory")
         String title,
-        @NotNull(message = "201")
-        @NotEmpty(message = "201")
+        @NotNull(message = "Description is mandatory")
+        @NotEmpty(message = "Description is mandatory")
         String description,
-        @NotNull(message = "202")
-        @NotEmpty(message = "202")
+        @NotNull(message = "Requirement is mandatory")
+        @NotEmpty(message = "Requirement is mandatory")
         String requirements,
-        @NotNull(message = "203")
-        @NotEmpty(message = "203")
+        @NotNull(message = "Skill is mandatory")
+        @NotEmpty(message = "Skill is mandatory")
         String skills,
-        @NotNull(message = "204")
-        @NotEmpty(message = "204")
+        @NotNull(message = "Location is mandatory")
+        @NotEmpty(message = "Location is mandatory")
         String Location,
         double salary,
-        @NotNull(message = "205")
+        @NotNull(message = "offer should be selected")
         Integer offerId
 
 

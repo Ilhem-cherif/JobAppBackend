@@ -8,16 +8,16 @@ import java.util.Date;
 
 public record EducationRequest(
         Integer id,
-        @NotNull(message = "400")
-        @NotEmpty(message = "400")
+        @NotNull(message = "Title is mandatory")
+        @NotEmpty(message = "Title is mandatory")
         String title,
-        @NotNull(message = "401")
-        @NotEmpty(message = "401")
+        @NotNull(message = "Description is mandatory")
+        @NotEmpty(message = "Description is mandatory")
         String description,
-        @NotNull(message = "402")
-        @PastOrPresent(message = "402")
+        @NotNull(message = "Start date is mandatory")
+        @PastOrPresent(message = "Start date is not valid")
         Date startDate,
-        @NotNull(message = "403")
+        @NotNull(message = "End date is mandatory")
         Date endDate
 ) {
 }
